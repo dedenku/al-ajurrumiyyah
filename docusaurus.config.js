@@ -30,6 +30,7 @@ const config = {
   organizationName: 'dedenku', // Usually your GitHub org/user name.
   projectName: 'al-ajurrumiyyah', // Usually your repo name.
   deploymentBranch: 'gh-pages', // Cabang tujuan penyebaran
+  trailingSlash: false,
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
