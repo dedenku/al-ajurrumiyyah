@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkal_ajurumiyah=self.webpackChunkal_ajurumiyah||[]).push([[9858],{5516:u=>{u.exports=JSON.parse('{"name":"docusaurus-plugin-content-blog","id":"default"}')}}]);

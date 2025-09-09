@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkal_ajurumiyah=self.webpackChunkal_ajurumiyah||[]).push([[5808],{9744:a=>{a.exports=JSON.parse('{"metadata":{"permalink":"/al-ajurrumiyyah/blog","page":1,"postsPerPage":10,"totalPages":1,"totalCount":4,"blogDescription":"Blog","blogTitle":"Blog"}}')}}]);

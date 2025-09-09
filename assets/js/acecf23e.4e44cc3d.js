@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkal_ajurumiyah=self.webpackChunkal_ajurumiyah||[]).push([[1903],{1912:a=>{a.exports=JSON.parse('{"blogBasePath":"/al-ajurrumiyyah/blog","blogTitle":"Blog","authorsListPath":"/al-ajurrumiyyah/blog/authors"}')}}]);
