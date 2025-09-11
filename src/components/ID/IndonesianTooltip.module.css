@@ -1,24 +1,13 @@
-/* Mengimpor font jika diperlukan, atau bisa mengandalkan font dari komponen sebelumnya */
 @import url("https://fonts.googleapis.com/css2?family=Scheherazade+New:wght@400;700&display=swap");
 
 /* Wrapper utama, sebagai titik referensi posisi */
 .wrapper {
   position: relative;
-  display: inline-block; /* Penting agar bisa menjadi referensi posisi */
+  display: inline-block;
 }
 
-/* Base style untuk semua teks Arab */
-.arabicTextOnly {
-  font-size: 1.2rem;
-  font-family: "Scheherazade New", serif;
-  font-weight: 500;
-}
-
-/* Teks Arab yang bisa diklik (interaktif) */
-.arabicWord {
-  /* Mewarisi gaya dari .arabicTextOnly */
-  composes: arabicTextOnly;
-
+/* Teks Indonesia yang bisa diklik (interaktif) */
+.interactiveText {
   color: var(--ifm-color-primary);
   cursor: pointer;
   border-bottom: 2px dotted var(--ifm-color-primary-light);
@@ -26,18 +15,23 @@
   padding-bottom: 2px;
 }
 
-.arabicWord:hover,
-.arabicWord:focus {
+.interactiveText:hover,
+.interactiveText:focus {
   color: var(--ifm-color-primary-dark);
   border-color: var(--ifm-color-primary-dark);
   outline: none;
 }
 
-/* Kontainer tooltip */
+/* Kontainer tooltip, sekarang dengan font Arab */
 .tooltip {
   position: absolute;
   bottom: 100%;
   margin-bottom: 10px;
+
+  /* Gaya font Arab untuk tooltip */
+  font-family: "Scheherazade New", serif;
+  font-weight: 700;
+  direction: rtl; /* Menjamin teks Arab ditampilkan dari kanan ke kiri */
 
   background-color: var(--ifm-background-surface-color);
   color: var(--ifm-font-color-base);
@@ -46,19 +40,16 @@
   box-shadow: var(--ifm-global-shadow-lg);
   border: 1px solid var(--ifm-color-emphasis-300);
 
-  font-size: 0.9rem;
+  font-size: 1.2rem; /* Ukuran font bisa disesuaikan untuk keterbacaan teks Arab */
   z-index: 10;
 
-  /* Memungkinkan teks panjang untuk wrap di mobile */
   white-space: normal;
   width: max-content;
-  max-width: 280px; /* Batas lebar tooltip */
+  max-width: 320px; /* Batas lebar bisa lebih besar untuk frasa Arab */
   text-align: center;
 
-  /* Menghapus posisi horizontal tetap, karena akan diatur oleh JS */
   left: 0;
 
-  /* Animasi saat muncul */
   animation: fadeIn 0.2s ease-out;
 }
 
@@ -67,7 +58,7 @@
   content: "";
   position: absolute;
   top: 100%;
-  left: 50%; /* Panah tetap di tengah tooltip */
+  left: 50%;
   transform: translateX(-50%);
 
   border-width: 6px;
@@ -86,4 +77,3 @@
     transform: translateY(0);
   }
 }
-

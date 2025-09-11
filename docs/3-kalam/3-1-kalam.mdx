@@ -4,23 +4,29 @@ slug: "kalam"
 
 import ArabicText from '@site/src/components/ArabicText';
 import AR from '@site/src/components/AR';
+import ID from '@site/src/components/ID';
 
-# Mengenal Kalam
+# Kalam
 
+<div style={{textAlign: 'center', fontSize: '2rem'}}><AR>بسم الله الرّحمن الرّحيم</AR></div>
 
+## Pengertian Kalam
 <ArabicText
-  arabicText="اَلْكَلَامُ هُوَ اللَّفْظُ الْمُرَكَّبُ الْمُفِيْدُ بِالْوَضْعِ"
+  arabicText="اَلْكَلَامُ هُوَ اللَّفْظُ الْمُرَكَّبُ، الْمُفِيْدُ بِالْوَضْعِ"
   translation="Kalam adalah lafadz yang tersusun, yang memberikan faedah (makna yang lengkap), dan disengaja."
-  source="Matan Al-Ajurrumiyyah, Bab Al-Kalam"
 />
 
-
+<AR ex="true">حَلِيمَةَ</AR>\
 Pengertian **Kalam** menurut ahli nahwu adalah <AR tooltip="Lafadz yang tersusun, memberikan faedah, dan disengaja">اَلْكَلَامُ هُوَ اللَّفْظُ الْمُرَكَّبُ الْمُفِيْدُ بِالْوَضْعِ</AR>. Setiap unsur dari definisi ini memiliki makna yang sangat penting.\
 Pengertian **Kalam** menurut ahli nahwu adalah <AR>اَلْكَلَامُ هُوَ اللَّفْظُ الْمُرَكَّبُ الْمُفِيْدُ بِالْوَضْعِ</AR>. Setiap unsur dari definisi ini memiliki makna yang sangat penting.
-
+Kalimat ini berisi <ID tooltip="الْكَلَامُ">sebuah kata</ID> dengan tooltip Arab.
 ### Perbedaan Utama dengan Komponen `ArabicText`
 
-* **Tampilan:** `ArabicTooltip` ditampilkan `inline` (menyatu dengan teks), sementara `ArabicText` ditampilkan sebagai `block` (membuat paragraf baru).
-* **Interaksi:** `ArabicTooltip` menggunakan *tooltip* yang muncul di atas teks, cocok untuk terjemahan singkat. `ArabicText` menggunakan area terjemahan yang *terbuka ke bawah*, cocok untuk penjelasan yang lebih panjang.
-* **Kasus Penggunaan:** Gunakan `ArabicTooltip` untuk menerjemahkan satu kata atau frasa di tengah kalimat. Gunakan `ArabicText` untuk mengutip dalil atau matan yang panjang sebagai blok tersendiri.
-
+## Pembagian Kalam dan Ciri-cirinya
+<ArabicText
+  arabicText="وأقسامُه ثلاثة: اِسمٌ ، وفعلٌ، وحَرفٌ جاءَ لمَعنى. 
+فالاسم يُعرَفُ بالخَفضِ، والتنوينِ ،ودخولِ الألف واللام، وحروفِ الخَفضِ وهي: مِن، واِلى ،وعَن، وعلى، وفِي ، ورُبَّ، والباءُ، والكافُ، واللامُ، وحروفِ القَسَم وهي:الواو، والباء، والتاء. 
+والفعلُ يُعرَفُ بقد، والسِّين، وسَوف،وتاء التأنيث الساكنة. 
+والحرفُ ما لا يَصلُحُ معه دليلُ الاسم ولا دليل الفعل. 
+"
+/>

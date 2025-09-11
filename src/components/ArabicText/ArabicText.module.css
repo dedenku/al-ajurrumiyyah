@@ -19,8 +19,8 @@
 .arabicContent {
   padding: 1.5rem 2rem;
   font-family: "Scheherazade New", serif;
-  font-size: 1.8rem;
-  font-weight: 700;
+  font-size: 1.65rem;
+  /* font-weight: 700; */
   line-height: 2.2;
   text-align: right;
   color: var(--ifm-font-color-base);

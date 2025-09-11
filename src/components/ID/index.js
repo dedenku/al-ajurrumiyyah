@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect, useLayoutEffect } from 'react';
-import styles from './ArabicTooltip.module.css';
+import styles from './IndonesianTooltip.module.css';
 
 /**
  * Hook kustom untuk mendeteksi klik di luar elemen.
@@ -22,52 +22,43 @@ const useClickOutside = (ref, handler) => {
 };
 
 /**
- * Komponen untuk menampilkan kata/frasa Arab inline.
- * Jika prop 'tooltip' diberikan, teks akan menjadi interaktif dan
- * memunculkan tooltip yang posisinya dinamis.
- * Jika tidak, komponen hanya akan menerapkan gaya font Arab.
+ * Komponen untuk menampilkan kata/frasa Indonesia inline.
+ * Jika prop 'tooltip' (berisi teks Arab) diberikan, teks akan menjadi interaktif
+ * dan memunculkan tooltip yang posisinya dinamis.
  *
  * @param {object} props
- * @param {React.ReactNode} props.children - Teks Arab yang akan ditampilkan.
- * @param {string} [props.tooltip] - Opsional: Teks terjemahan untuk tooltip.
- * @param {boolean} [props.ex=false] - Opsional: Jika true, teks akan ditandai sebagai contoh.
+ * @param {React.ReactNode} props.children - Teks Indonesia yang akan ditampilkan.
+ * @param {string} [props.tooltip] - Opsional: Teks Arab untuk tooltip.
  */
-const AR = ({ children, tooltip, ex = false }) => {
+const ID = ({ children, tooltip }) => {
     const [isVisible, setIsVisible] = useState(false);
     const wrapperRef = useRef(null);
     const tooltipRef = useRef(null);
 
-    // Menentukan apakah komponen harus interaktif berdasarkan adanya prop 'tooltip'.
     const isInteractive = tooltip && tooltip.trim() !== '';
 
-    // Menutup tooltip saat pengguna mengklik di luar.
     useClickOutside(wrapperRef, () => {
         if (isInteractive) {
             setIsVisible(false);
         }
     });
 
-    // Mengatur posisi tooltip secara dinamis agar tidak terpotong layar.
     useLayoutEffect(() => {
         if (isInteractive && isVisible && wrapperRef.current && tooltipRef.current) {
             const wordRect = wrapperRef.current.getBoundingClientRect();
             const tooltipNode = tooltipRef.current;
 
-            // Menggunakan requestAnimationFrame untuk memastikan DOM sudah siap.
             requestAnimationFrame(() => {
                 const tooltipRect = tooltipNode.getBoundingClientRect();
                 const viewportWidth = window.innerWidth;
-                const margin = 16; // Jarak aman dari tepi layar
+                const margin = 16;
 
-                // Posisi default: di tengah kata
                 let left = (wordRect.width - tooltipRect.width) / 2;
 
-                // Cek apakah melampaui batas kanan layar
                 if (wordRect.left + left + tooltipRect.width > viewportWidth - margin) {
                     left = viewportWidth - wordRect.left - tooltipRect.width - margin;
                 }
 
-                // Cek apakah melampaui batas kiri layar
                 if (wordRect.left + left < margin) {
                     left = margin - wordRect.left;
                 }
@@ -77,14 +68,10 @@ const AR = ({ children, tooltip, ex = false }) => {
         }
     }, [isVisible, isInteractive]);
 
-    const content = ex ? `«${children}»` : children;
-
     if (!isInteractive) {
-        // Versi non-interaktif: hanya styling font
-        return <span className={styles.arabicTextOnly}>{content}</span>;
+        return <span>{children}</span>;
     }
 
-    // Versi interaktif dengan tooltip
     const handleClick = () => {
         setIsVisible(prev => !prev);
     };
@@ -101,7 +88,7 @@ const AR = ({ children, tooltip, ex = false }) => {
     return (
         <span className={styles.wrapper} ref={wrapperRef}>
             <span
-                className={styles.arabicWord}
+                className={styles.interactiveText}
                 onClick={handleClick}
                 onKeyDown={handleKeyDown}
                 role="button"
@@ -109,7 +96,7 @@ const AR = ({ children, tooltip, ex = false }) => {
                 aria-describedby={tooltipId}
                 aria-expanded={isVisible}
             >
-                {content}
+                {children}
             </span>
             {isVisible && (
                 <span
@@ -125,5 +112,4 @@ const AR = ({ children, tooltip, ex = false }) => {
     );
 };
 
-export default AR;
-
+export default ID;
