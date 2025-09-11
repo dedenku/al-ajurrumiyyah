@@ -1,1 +1,5 @@
+---
+slug: sample
+---
+
 # Lorem Ipsum

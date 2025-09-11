@@ -1,0 +1,100 @@
+/* Mengimpor font yang memiliki nuansa klasik dan sangat mudah dibaca */
+@import url("https://fonts.googleapis.com/css2?family=Scheherazade+New:wght@400;700&display=swap");
+
+/* Kontainer utama untuk kutipan */
+.container {
+  margin: 2rem 0;
+  border: 1px solid var(--ifm-color-emphasis-200);
+  background-color: var(--ifm-background-color);
+  border-radius: var(--ifm-card-border-radius);
+  box-shadow: var(--ifm-global-shadow-sm);
+  transition: box-shadow 0.2s ease-in-out;
+}
+
+.container:hover {
+  box-shadow: var(--ifm-global-shadow-md);
+}
+
+/* Bagian teks Arab yang bisa diklik */
+.arabicContent {
+  padding: 1.5rem 2rem;
+  font-family: "Scheherazade New", serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  line-height: 2.2;
+  text-align: right;
+  color: var(--ifm-font-color-base);
+  cursor: pointer;
+  position: relative;
+  border-bottom: 1px solid var(--ifm-color-emphasis-200);
+  transition: background-color 0.2s ease;
+}
+
+.arabicContent:hover {
+  background-color: var(--ifm-color-emphasis-100);
+}
+
+/* Mengatur agar paragraf di dalam tidak memiliki margin bawaan */
+.arabicContent p {
+  margin: 0;
+  padding: 0;
+  /* Memberi sedikit ruang agar teks tidak tumpang tindih dengan ikon */
+  padding-left: 2rem;
+}
+
+/* --- BARU: Gaya untuk ikon panah --- */
+.toggleIcon {
+  position: absolute;
+  top: 1.5rem;
+  left: 1.5rem;
+  color: var(--ifm-color-content-secondary);
+  transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94), color 0.2s;
+}
+
+.arabicContent:hover .toggleIcon {
+  color: var(--ifm-color-primary);
+}
+
+.iconVisible {
+  transform: rotate(180deg);
+}
+/* --- Akhir dari gaya ikon --- */
+
+/* Wrapper untuk animasi terjemahan */
+.translationWrapper {
+  display: grid;
+  grid-template-rows: 0fr; /* Awalnya tersembunyi dengan tinggi 0 */
+  opacity: 0;
+  transition: grid-template-rows 0.4s ease-in-out, opacity 0.4s ease-in-out;
+}
+
+.translationWrapper.visible {
+  grid-template-rows: 1fr; /* Saat terlihat, tingginya menjadi 1fr */
+  opacity: 1;
+}
+
+/* Konten terjemahan di dalamnya */
+.translationContent {
+  overflow: hidden; /* Penting untuk animasi grid */
+  background-color: var(--ifm-color-emphasis-100);
+}
+
+.translationText {
+  padding: 1.5rem 2rem;
+  font-size: 0.95rem;
+  line-height: 1.8;
+  color: var(--ifm-color-content-secondary);
+  margin: 0;
+}
+
+/* Info sumber kutipan */
+.sourceInfo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0 2rem 1rem;
+  font-size: 0.85rem;
+  font-style: italic;
+  color: var(--ifm-color-content-secondary);
+  opacity: 0.8;
+}

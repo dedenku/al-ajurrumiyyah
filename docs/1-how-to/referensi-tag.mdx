@@ -1,0 +1,410 @@
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+import CodeBlock from '@theme/CodeBlock';
+import Admonition from '@theme/Admonition';
+import TOCInline from '@theme/TOCInline';
+
+# Referensi Lengkap MDX Docusaurus untuk Web Book Nahwu
+
+Dokumen ini berisi semua contoh tag dan komponen MDX Docusaurus yang dapat digunakan untuk menyusun web book pelajaran nahwu.
+
+## 1. Frontmatter (Metadata Halaman)
+
+```yaml
+---
+title: Bab 1 - Pengenalan Nahwu
+description: Pengenalan dasar ilmu nahwu dalam bahasa Arab
+sidebar_label: Pengenalan
+sidebar_position: 1
+tags: [nahwu, dasar, pengenalan]
+keywords: [nahwu, grammar, arabic, تحو]
+authors: [nama-penulis]
+---
+```
+
+**Penjelasan**: Frontmatter mendefinisikan metadata halaman seperti judul, deskripsi, posisi di sidebar, dan tag untuk SEO.
+
+## 2. Import Komponen
+
+
+
+**Penjelasan**: Import komponen yang akan digunakan dalam dokumen MDX.
+
+## 3. Admonitions (Kotak Peringatan/Info)
+
+### Note (Catatan)
+:::note Catatan Penting
+Dalam nahwu, setiap kata memiliki kedudukan (i'rab) yang menentukan fungsinya dalam kalimat.
+:::
+
+### Tip (Tips)
+:::tip Tips Belajar
+Hafalkan terlebih dahulu jenis-jenis kata (kalimah) sebelum mempelajari i'rab.
+:::
+
+### Info (Informasi)
+:::info Informasi Tambahan
+Ilmu nahwu pertama kali dikodifikasi oleh Abu Al-Aswad Ad-Du'ali.
+:::
+
+### Warning (Peringatan)
+:::warning Perhatian
+Jangan sampai tertukar antara rafa' dan nashb dalam menganalisis kalimat.
+:::
+
+### Danger (Bahaya)
+:::danger Kesalahan Umum
+Mengabaikan tanda i'rab dapat mengubah makna kalimat secara drastis.
+:::
+
+### Custom Admonition
+:::caution Hati-hati
+Beberapa kata memiliki i'rab yang tidak berubah (mabni).
+:::
+
+**Penjelasan**: Admonitions digunakan untuk menekankan informasi penting dengan visual yang menarik.
+
+## 4. Code Blocks (Blok Kode)
+
+### Code Block Sederhana
+```
+الطَّالِبُ مُجْتَهِدٌ
+```
+
+### Code Block dengan Bahasa
+```arabic
+الطَّالِبُ مُجْتَهِدٌ
+الطَّالِبَ مُجْتَهِدًا
+الطَّالِبِ مُجْتَهِدٍ
+```
+
+### Code Block dengan Title
+```arabic title="Contoh I'rab Isim"
+الطَّالِبُ مُجْتَهِدٌ (mubtada' - marfu')
+رَأَيْتُ الطَّالِبَ (maf'ul bih - manshub)
+مَرَرْتُ بِالطَّالِبِ (majrur - majrur)
+```
+
+### Code Block dengan Line Numbers
+```arabic showLineNumbers
+الطَّالِبُ مُجْتَهِدٌ
+الطَّالِبَانِ مُجْتَهِدَانِ
+الطُّلَّابُ مُجْتَهِدُونَ
+```
+
+### Code Block dengan Highlight
+```arabic {2,4}
+الطَّالِبُ مُجْتَهِدٌ
+الطَّالِبَانِ مُجْتَهِدَانِ
+الطَّالِبَةُ مُجْتَهِدَةٌ
+الطَّالِبَتَانِ مُجْتَهِدَتَانِ
+```
+
+**Penjelasan**: Code blocks berguna untuk menampilkan contoh teks Arab, analisis nahwu, atau skema kalimat.
+
+## 5. Tabs (Tab)
+
+<Tabs>
+<TabItem value="mubtada-khabar" label="Mubtada-Khabar" default>
+
+**Mubtada-Khabar** adalah struktur kalimat nominal dalam bahasa Arab.
+
+```arabic
+الطَّالِبُ مُجْتَهِدٌ
+```
+- الطَّالِبُ (mubtada' - marfu')
+- مُجْتَهِدٌ (khabar - marfu')
+
+</TabItem>
+<TabItem value="fi'l-fa'il" label="Fi'l-Fa'il">
+
+**Fi'l-Fa'il** adalah struktur kalimat verbal dalam bahasa Arab.
+
+```arabic
+قَرَأَ الطَّالِبُ الكِتَابَ
+```
+- قَرَأَ (fi'l madi)
+- الطَّالِبُ (fa'il - marfu')
+- الكِتَابَ (maf'ul bih - manshub)
+
+</TabItem>
+<TabItem value="jumlah-syarthiyyah" label="Jumlah Syarthiyyah">
+
+**Jumlah Syarthiyyah** adalah kalimat bersyarat.
+
+```arabic
+إِنْ تَدْرُسْ تَنْجَحْ
+```
+- إِنْ (harf syarth)
+- تَدْرُسْ (fi'l syarth - majzum)
+- تَنْجَحْ (jawab syarth - majzum)
+
+</TabItem>
+</Tabs>
+
+**Penjelasan**: Tabs berguna untuk mengorganisir materi yang berkaitan dalam satu topik.
+
+## 6. Details (Expandable Content)
+
+<details>
+<summary>Penjelasan Detail tentang I'rab</summary>
+
+I'rab adalah perubahan akhir kata dalam bahasa Arab yang menunjukkan fungsi kata tersebut dalam kalimat. Ada empat keadaan i'rab:
+
+1. **Rafa'** (رفع): untuk subjek dan predikat
+2. **Nashb** (نصب): untuk objek langsung dan beberapa kondisi lain
+3. **Jarr** (جر): setelah preposisi
+4. **Jazm** (جزم): untuk fi'l mudari' dalam kondisi tertentu
+
+</details>
+
+**Penjelasan**: Details memberikan informasi tambahan yang bisa dibuka tutup untuk menghemat ruang.
+
+## 7. Table (Tabel)
+
+| Jenis Kata | Contoh | I'rab | Keterangan |
+|------------|--------|--------|-------------|
+| Isim | الطَّالِبُ | Marfu' | Subjek kalimat |
+| Fi'l | قَرَأَ | Mabni | Tidak berubah |
+| Harf | فِي | Mabni | Tidak berubah |
+
+### Tabel dengan Alignment
+
+| Rafa' | Nashb | Jarr |
+|:-----:|:-----:|:----:|
+| ـُ | ـَ | ـِ |
+| ـُوْنَ | ـِيْنَ | ـِيْنَ |
+| ـَانِ | ـَيْنِ | ـَيْنِ |
+
+**Penjelasan**: Tabel berguna untuk membandingkan informasi atau menyajikan data terstruktur.
+
+## 8. Math (Formula Matematika)
+
+Untuk rumus nahwu dalam notasi:
+
+{/* $$\text{Jumlah_Ismiyyah} = \text{Mubtada} + \text{Khabar}$$ */}
+
+{/* Inline math: $\text{Irab} = \text{Rafa} \cup \text{Nashb} \cup \text{Jarr} \cup \text{Jazm}$ */}
+
+**Penjelasan**: Math dapat digunakan untuk formula atau representasi simbolik aturan nahwu.
+
+## 9. Footnotes (Catatan Kaki)
+
+Ilmu nahwu dikembangkan oleh Abu Al-Aswad Ad-Du'ali[^1] pada abad ke-7 Masehi.
+
+Sistem i'rab sangat penting dalam memahami Al-Qur'an[^2].
+
+[^1]: Abu Al-Aswad Ad-Du'ali (603-688 M) adalah tokoh yang pertama kali mengkodifikasi tata bahasa Arab.
+
+[^2]: Kesalahan dalam i'rab dapat mengubah makna ayat Al-Qur'an.
+
+**Penjelasan**: Footnotes memberikan referensi atau penjelasan tambahan tanpa mengganggu flow teks utama.
+
+## 10. TOC Inline (Daftar Isi Inline)
+
+{/* <TOCInline toc={toc} /> */}
+
+**Penjelasan**: TOC Inline menampilkan daftar isi untuk halaman saat ini.
+
+## 11. Highlight Text
+
+Dalam nahwu, ==i'rab== adalah konsep yang sangat penting untuk dipahami.
+
+**Penjelasan**: Highlight untuk menekankan kata atau frasa penting.
+
+## 12. Embedding Content
+
+### YouTube Video
+![Pengenalan Nahwu](https://www.youtube.com/embed/VIDEO_ID)
+
+### Image dengan Caption
+![Skema I'rab](/img/docusaurus.png "Skema lengkap sistem i'rab dalam bahasa Arab")
+
+**Penjelasan**: Untuk menyisipkan konten multimedia dalam pembelajaran.
+
+## 13. Links dan References
+
+### Internal Links
+- [Bab Selanjutnya: Fi'l](./sample.md)
+- [Kembali ke Daftar Isi](../README.md)
+
+### External Links
+- [Kamus Al-Ma'any](https://www.almaany.com/)
+- [Maktabah Syamilah](https://shamela.ws/)
+
+### Reference Style Links
+Rujukan ke [Alfiyyah Ibnu Malik][alfiyyah] dan [Ajrumiyyah][ajrumiyyah].
+
+[alfiyyah]: https://example.com/alfiyyah
+[ajrumiyyah]: https://example.com/ajrumiyyah
+
+**Penjelasan**: Untuk navigasi antar halaman dan referensi eksternal.
+
+## 14. Custom Components (Komponen Kustom)
+
+### Komponen Ayat Al-Qur'an
+```jsx
+<AyatQuran 
+  arabic="إِيَّاكَ نَعْبُدُ وَإِيَّاكَ نَسْتَعِينُ"
+  translation="Hanya kepada Engkaulah kami menyembah dan hanya kepada Engkaulah kami meminta pertolongan"
+  surah="Al-Fatihah"
+  ayat={5}
+/>
+```
+
+### Komponen Analisis Nahwu
+```
+<AnalisisNahwu>
+  <KataArab>الطَّالِبُ</KataArab>
+  <Fungsi>Mubtada'</Fungsi>
+  <Irab>Marfu' dengan dhammah</Irab>
+  <Penjelasan>Subjek dalam kalimat nominal</Penjelasan>
+</AnalisisNahwu>
+```
+
+**Penjelasan**: Komponen kustom untuk kebutuhan spesifik pembelajaran nahwu.
+
+## 15. Quiz/Interactive Elements
+
+### Quiz Sederhana
+```jsx
+<Quiz>
+  <Question>Apa i'rab dari كلمة "الطَّالِبُ" dalam kalimat "الطَّالِبُ مُجْتَهِدٌ"?</Question>
+  <Options>
+    <Option correct>Marfu' (mubtada')</Option>
+    <Option>Manshub (maf'ul bih)</Option>
+    <Option>Majrur</Option>
+    <Option>Majzum</Option>
+  </Options>
+</Quiz>
+```
+
+**Penjelasan**: Elemen interaktif untuk menguji pemahaman siswa.
+
+## 16. Formatting Text
+
+**Bold text** untuk penekanan
+*Italic text* untuk istilah asing
+~~Strikethrough~~ untuk koreksi
+`Inline code` untuk istilah teknis
+
+**Superscript**: H^2^O
+**Subscript**: CO~2~
+
+**Penjelasan**: Format teks standar untuk berbagai keperluan.
+
+## 17. Lists (Daftar)
+
+### Unordered List
+- Isim (اسم)
+  - Isim marfu'
+  - Isim manshub  
+  - Isim majrur
+- Fi'l (فعل)
+  - Fi'l madi
+  - Fi'l mudari'
+  - Fi'l amr
+- Harf (حرف)
+
+### Ordered List
+1. Pelajari jenis-jenis kalimah
+2. Pahami konsep i'rab
+3. Praktikkan analisis kalimat
+4. Hafalkan aturan-aturan khusus
+
+### Task List
+- [x] Selesai: Bab 1 - Pengenalan
+- [x] Selesai: Bab 2 - Kalimah
+- [ ] Dalam proses: Bab 3 - I'rab
+- [ ] Belum mulai: Bab 4 - Fi'l
+
+**Penjelasan**: Berbagai jenis daftar untuk mengorganisir informasi.
+
+## 18. Blockquotes (Kutipan)
+
+> "من تعلم لغة قوم أمن مكرهم"
+> 
+> "Barangsiapa mempelajari bahasa suatu kaum, maka ia akan aman dari tipu daya mereka"
+> 
+> — Umar bin Khattab
+
+**Penjelasan**: Untuk kutipan hadis, ayat, atau perkataan ulama.
+
+## 19. Dividers (Pembagi)
+
+---
+
+Gunakan tiga tanda hubung untuk membuat garis pembagi antar seksi.
+
+---
+
+**Penjelasan**: Untuk memisahkan bagian-bagian dalam dokumen.
+
+## 20. HTML dalam MDX
+
+Anda juga bisa menggunakan HTML langsung:
+
+<div style={{backgroundColor: '#f0f8ff', padding: '20px', borderRadius: '10px', margin: '20px 0'}}>
+  <h3 style={{color: '#1e40af', marginTop: 0}}>Catatan Khusus</h3>
+  <p>Bagian ini menggunakan HTML untuk styling khusus yang tidak tersedia dalam Markdown standar.</p>
+</div>
+
+<center>
+  <strong>Teks yang dicentering dengan HTML</strong>
+</center>
+
+**Penjelasan**: HTML dapat digunakan untuk kontrol layout yang lebih detail.
+
+## 21. Variables dan Template
+
+Anda bisa mendefinisikan variabel untuk digunakan berulang:
+
+export const kataSeru = "سُبْحَانَ اللهِ";
+export const artinya = "Maha Suci Allah";
+
+Contoh penggunaan: {kataSeru} yang artinya {artinya}.
+
+**Penjelasan**: Variables berguna untuk konten yang sering diulang.
+
+## 22. Conditional Content
+
+```jsx
+{process.env.NODE_ENV === 'development' && (
+  <div>
+    <p>Konten ini hanya muncul dalam mode development</p>
+  </div>
+)}
+```
+
+**Penjelasan**: Untuk konten yang hanya muncul dalam kondisi tertentu.
+
+## Tips Penggunaan untuk Web Book Nahwu
+
+1. **Gunakan Admonitions** untuk highlight aturan penting nahwu
+2. **Manfaatkan Tabs** untuk mengelompokkan contoh-contoh serupa
+3. **Code Blocks** sangat berguna untuk contoh kalimat Arab
+4. **Tabel** efektif untuk perbandingan i'rab
+5. **Details** cocok untuk penjelasan tambahan yang opsional
+6. **Footnotes** untuk referensi kitab-kitab nahwu klasik
+7. **Custom Components** bisa dibuat untuk analisis nahwu yang konsisten
+
+## Struktur File yang Disarankan
+
+```
+docs/
+├── intro.md                 # Pengenalan
+├── kalimah/
+│   ├── isim.mdx            # Bab Isim
+│   ├── fil.mdx             # Bab Fi'l  
+│   └── harf.mdx            # Bab Harf
+├── irab/
+│   ├── rafa.mdx            # Bab Rafa'
+│   ├── nashb.mdx           # Bab Nashb
+│   ├── jarr.mdx            # Bab Jarr
+│   └── jazm.mdx            # Bab Jazm
+└── latihan/
+    ├── quiz-1.mdx          # Latihan 1
+    └── quiz-2.mdx          # Latihan 2
+```
+
+Semoga referensi ini membantu dalam menyusun web book pelajaran nahwu yang komprehensif dan interaktif!
